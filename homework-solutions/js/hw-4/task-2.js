@@ -52,4 +52,15 @@ else if (age > maxAge) {
 }
 else {
   console.log ("Technical work")
+=======
+let minAge, maxAge, age
+minAge = 18
+maxAge = 60
+age = 10
+if (typeof age !== "number") {
+  console.log ("Incorrect data type")
+} else {
+  if( age < minAge ){
+    console.log(`"You don't have access cause your age is ${age} It's less then"`)
+}
 }
