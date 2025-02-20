@@ -14,6 +14,45 @@
   5. Проверить задание со следующими значениями в переменной age: 10, 17, 18, 19, 59, 60, 61
 
   */
+  let minAge, maxAge, age
+  minAge = 18
+  maxAge = 60
+  age = "2"
+  age = parseInt(age)
+  if (isNaN (age)) {
+    console.log ("Incorrect data type")
+  } if ( age < minAge )
+    {
+      console.log(`You don't have access cause your age is ${age} It's less then`)
+  }
+  else if (age >=minAge && age <= maxAge) {
+  console.log ("Welcome")
+  }
+  else if (age > maxAge) {
+    console.log("Keep calm and look culture channel")
+  }
+  else {
+    console.log ("Technical work")
+  }
+let minAge, maxAge, age
+minAge = 18
+maxAge = 60
+age = 61
+if (isNaN (age)) {
+  console.log ("Incorrect data type")
+} if ( age < minAge )
+  {
+    console.log(`You don't have access cause your age is ${age} It's less then`)
+}
+else if (age >=minAge && age <= maxAge) {
+console.log ("Welcome")
+}
+else if (age > maxAge) {
+  console.log("Keep calm and look culture channel")
+}
+else {
+  console.log ("Technical work")
+=======
 let minAge, maxAge, age
 minAge = 18
 maxAge = 60
