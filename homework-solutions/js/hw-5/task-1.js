@@ -3,8 +3,14 @@
  * Переменная для результата `evenNumbersResult` уже создана и содержит пустую строку.
  * Ожидаемый результат: '10-8-6-4-2-0'
  */
-
 let evenNumbersResult = '';
+for (let n = 10; n >= 0; n -= 2) {
+    if (evenNumbersResult !== '') {
+        evenNumbersResult += '-';
+    }
+    evenNumbersResult += n;
+}
+console.log(evenNumbersResult);
 
 /**
  * Создать строку из 5 строк с увеличивающимся количеством смайликов ":)".
@@ -18,6 +24,14 @@ let evenNumbersResult = '';
  */
 
 let smilePatternResult = '';
+for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= i; j++) {
+        smilePatternResult += ':)';
+    }
+    smilePatternResult += '\n';
+}
+console.log(smilePatternResult)
+   
 
 /**
  * Заменить все пробелы в переменной text на "1".

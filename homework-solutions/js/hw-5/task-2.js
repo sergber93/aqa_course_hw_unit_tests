@@ -17,5 +17,10 @@
  * 100 - делится на 5
  */
 let fizzBuzzResult = '';
+for(let i = 0 ; i <=100 ; i++)
+    if (i % 3 === 0 && i % 5 === 0 ){
+        fizzBuzzResult +=   "число - делится и на 3 и на 5"
+    }
 
+    console.log(fizzBuzzResult)
 export { fizzBuzzResult };
