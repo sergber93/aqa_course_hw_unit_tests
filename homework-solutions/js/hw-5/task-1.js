@@ -24,13 +24,15 @@ console.log(evenNumbersResult);
  */
 
 let smilePatternResult = '';
+let smile = ':)';
 for (let i = 1; i <= 5; i++) {
-    for (let j = 1; j <= i; j++) {
-        smilePatternResult += ':)';
-    }
-    smilePatternResult += '\n';
+  for (let j = 1; j <= i; j++) {
+    smilePatternResult += smile;
+  }
+  smilePatternResult += '\n';
 }
-console.log(smilePatternResult)
+smilePatternResult = smilePatternResult.trim();
+console.log(smilePatternResult);
    
 
 /**
@@ -39,6 +41,7 @@ console.log(smilePatternResult)
  * Ожидаемый результат: 'Hello!1I1am1a1JS1student!'
  */
 const text = 'Hello! I am a JS student!';
-let replaceSpacesWithOneResult = '';
+let replaceSpacesWithOneResult = text.replace(/ /g, '1');
+console.log(replaceSpacesWithOneResult);
 
 export { evenNumbersResult, smilePatternResult, replaceSpacesWithOneResult };

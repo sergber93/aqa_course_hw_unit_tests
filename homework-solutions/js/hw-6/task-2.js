@@ -12,27 +12,37 @@
   const myPizzasT1 = ['Peperoni', 'Margherita', 'Diablo', 'Vegetarian'];
   const myPizzasT2 = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai'];
 */
-const competitorPizzas = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai'] ;
+
+const competitorPizzas = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai'];
+
 const myPizzasT1 = ['Peperoni', 'Margherita', 'Diablo', 'Vegetarian'];
+
 const myPizzasT2 = ['Peperoni', 'Caprichosa', 'Diablo', '4 cheeses', 'hawai'];
-const myPizzasAll = myPizzasT1.concat (myPizzasT2)
 
-const competitorPizzasLower = competitorPizzas.map(pizza => pizza.toLowerCase())
-const myPizzasAllLower = myPizzasAll.map (pizza => pizza.toLowerCase())
+let resultNull;
 
-let resultUnique = [];
+const resultUnique = [];
 
-for (let i = 0; i < myPizzasAllLower.length; i++){
- const pizza = myPizzasAllLower[i]
- if (!competitorPizzasLower.includes(pizza)){
-  resultUnique.push(pizza)
- }
+const competitorPizzasLowerCase = [];
+
+for (const pizza of competitorPizzas) {
+  competitorPizzasLowerCase.push(pizza.toLowerCase());
 }
 
-let resultNull =  resultUnique.lenth === 0 ? null: undefined ;
+for (const pizza of myPizzasT1) {
+  competitorPizzasLowerCase.includes(pizza.toLocaleLowerCase())
+    ? (resultNull = null)
+    : resultUnique.push(pizza.toLocaleLowerCase());
+}
 
+for (const pizza of myPizzasT2) {
+  competitorPizzasLowerCase.includes(pizza.toLocaleLowerCase())
+    ? (resultNull = null)
+    : resultUnique.push(pizza.toLocaleLowerCase());
+}
 
-console.log(resultUnique); 
-console.log(resultNull)
+console.log(resultNull);
+
+console.log(resultUnique);
 
 export { resultNull, resultUnique };
